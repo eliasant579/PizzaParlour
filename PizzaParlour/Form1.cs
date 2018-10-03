@@ -16,5 +16,20 @@ namespace PizzaParlour
         {
             InitializeComponent();
         }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            Graphics g = this.CreateGraphics();
+            Pen drawPen = new Pen(Color.Red, 60);
+
+            g.DrawLine(drawPen, 0, 30, this.Width, 30);
+
+            Font writeFont = new Font("Arial", 16);
+            SolidBrush writeBrush = new SolidBrush(Color.White);
+
+            g.DrawString("Pizza Parlour", writeFont, writeBrush, this.Width/2 - 80, 20);
+
+
+        }
     }
 }
